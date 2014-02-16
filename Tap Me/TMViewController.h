@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMViewController : UIViewController
+@interface TMViewController : UIViewController <UIAlertViewDelegate>
+{
+    IBOutlet UILabel *scoreLabel;
+    IBOutlet UILabel *timerLabel;
+    
+    NSInteger count;
+    NSInteger seconds;
+    
+    NSTimer *timer;
+}
+
+- (IBAction)buttonPressed:(id)sender;
+
+- (void)setupGame;
 
 @end
